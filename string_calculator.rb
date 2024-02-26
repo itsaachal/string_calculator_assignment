@@ -18,12 +18,13 @@ class StringCalculator
     raise ArgumentError, "Negatives not allowed: #{negatives.join(',')}" if negatives.any?
   end
 
-  calculator = StringCalculator.new
-  input_string = "10,\n20\n30,1"
-  begin
-    result = calculator.add(input_string)
-    puts result
-  rescue ArgumentError => e
-    puts "Error: #{e.message}"
-  end
+end
+
+calculator = StringCalculator.new
+input_string = "10,\n20\n30,1"
+begin
+  result = calculator.add(input_string)
+  puts result
+rescue ArgumentError => e
+  puts "Error: #{e.message}"
 end
