@@ -14,7 +14,12 @@ class StringCalculator
   end
 
   calculator = StringCalculator.new
-  input_string = "10,\n20\n30"
-  p result = calculator.add(input_string)
-
+  input_string = "10,\n20\n30,1"
+  begin
+    result = calculator.add(input_string)
+    p result
+  rescue ArgumentError => e
+    puts "Error: #{e.message}"
+  end
 end
+
